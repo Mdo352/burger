@@ -14,7 +14,7 @@ var orm = {
       
     },
     insertOne: function(table, val, cb) {
-        var queryString = "INSERT INTO BURGERS (burger_name, isDevoured) VALUES("+val+", false);";
+        var queryString = "INSERT INTO BURGERS (burger_name, isDevoured) VALUES('"+val+"', false);";
         // var queryString = "INSERT INTO BURGERS (burger_name, isDevoured) VALUES('mike', false);";
         connection.query(queryString, function(err,result){
             if (err) throw err;
