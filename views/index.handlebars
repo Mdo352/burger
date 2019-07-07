@@ -8,6 +8,7 @@
     <div class="row">
 
       <div class="col-md-6">
+        <h3>Uneaten Burgers</h3>
         {{#each burgerData}}
           {{#unless this.isDevoured}}
             <div class="col-md-6">
@@ -23,33 +24,36 @@
             </div>
 
           {{/unless}}
+        {{/each}}
+      </div>
 
+      <div class="col-md-6">
+        <h3>Finished Burgers</h3>
+        {{#each burgerData}}
           {{#if this.isDevoured}}
              <div class="col-md-6">
               {{this.id}}. {{this.burger_name}} 
             </div>
           {{/if}}
-
         {{/each}}
       </div>
-
-      {{!-- <div class="col-md-6">
-        {{#each burgerData}}
-          {{#if}}
-
-          {{/if}}
-        {{/each burgerData}}
-      </div> --}}
 
     </div>
 
   </div>
 
 </div>
-{{!-- <form class="create-form">
-  <div class="form-group">
-    <label for="newBurger">Burger Name:</label>
-    <input type="text" id="newBurger" name="name">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3>Create Your own burger here</h3>
+
+      <form method="POST" action="/burgers/create" class="create-form">
+          <input type="text" name="burger_name">
+        <button type="submit" class="btn btn-sm btn-dark">Add Burger</button>
+      </form>
+
+    </div>
   </div>
-  <button type="submit">Add Burger</button>
-</form> --}}
+</div>

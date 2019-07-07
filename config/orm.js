@@ -13,13 +13,16 @@ var orm = {
         });
       
     },
-    // insertOne: function(table, condition, cb) {
-    //     var queryString = "SELECT * FROM " + table + " where condition;";
+    insertOne: function(table, val, cb) {
+        var queryString = "INSERT INTO BURGERS (burger_name, isDevoured) VALUES("+val+", false);";
+        // var queryString = "INSERT INTO BURGERS (burger_name, isDevoured) VALUES('mike', false);";
+        connection.query(queryString, function(err,result){
+            if (err) throw err;
+            cb(result);
+        }) 
 
-    //     // connection.query = 
-    // },
+    },
     updateOne: function(tableInput, condition, cb) {
-        console.log('orm file');
         var queryString = "UPDATE burgers SET isDevoured=true WHERE id=" + condition + ";";
         connection.query(queryString, function(err, result) {
             if (err) throw err;
