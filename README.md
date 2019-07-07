@@ -2,7 +2,7 @@
 Burger logger  
 Create a log of various burgers that you want to eat. You can create a list of burgers you want to try. As well as mark them as consumed with a press of a button. This app will be your go to companion all summer long.
 
-The deployed version of the application is here:
+The deployed version of the application is here:https://infinite-castle-20595.herokuapp.com/
 
 ## Run Locally
 1. Clone this repository: https://github.com/Mdo352/burger.git
