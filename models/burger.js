@@ -7,11 +7,11 @@ var burger = {
         })
     },
     update: function(id, cb){
-        console.log('burger file');
-        orm.updateOne(id,cb)
+        // console.log('burger file');
+        orm.updateOne("burgers", id, cb)
     },
     create: function(name, cb){
-        orm.insertOne(name,cb)
+        orm.insertOne("burgers", name, cb)
     }
 };
 
