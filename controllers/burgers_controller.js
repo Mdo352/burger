@@ -11,16 +11,18 @@ router.get("/", function(req, res) {
   })
 });
 
-router.put("/burgers/update", function(req, res){
-  burger.update(req.body.burger_id, function(result){
-    console.log(result);
+router.put("/burgers/update/:id", function(req, res){
+  var condition = "id = " + req.params.id;
+  console.log("update condition"+ condition);
+
+  burger.update({isDevoured: req.body.isDevoured}, condition, function(result){
+    // console.log(result);
     res.redirect("/");
   });
 });
 
 router.post("/burgers/create", function(req, res){
   burger.create(req.body.burger_name, function(result){
-    console.log("!!!!!!!!!"+req.body.burger_name);
     res.redirect("/");
   });
 });
