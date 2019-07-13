@@ -16,7 +16,8 @@
             </div>
 
             <div class="col-md-6">
-              <form method="POST" action="/burgers/update?_method=PUT">
+              {{!-- <form method="POST" action="/burgers/update?_method=PUT"> --}}
+              <form method="POST" action="/burgers/update">
                 <input type="hidden" name="burger_id" type="text" value = {{this.id}}>
                 <button  type="submit" class="btn btn-sm btn-dark">Eat It!</button>
               </form>

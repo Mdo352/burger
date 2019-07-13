@@ -11,7 +11,7 @@ router.get("/", function(req, res) {
   })
 });
 
-router.put("/burgers/update/:id", function(req, res){
+router.put("/burgers/update/", function(req, res){
   var condition = "id = " + req.params.id;
   console.log("update condition"+ condition);
 
