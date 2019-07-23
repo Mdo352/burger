@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
   // database: "burgers_db"
   host: "tkck4yllxdrw0bhi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
   port: 3306,
-  user: "ats8xzf6452y8tap	",
+  user: "ats8xzf6452y8tap",
   password: "ew1k9ao9f9xpu594",
   database: "hk3p5ugfxouy9v75"
 });
