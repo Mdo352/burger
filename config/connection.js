@@ -1,6 +1,5 @@
 // require("dotenv").config();
 // var security = require("./security");
-// var SQL_PASSWORD = toString(security.sql);
 
 var mysql = require("mysql");
 
@@ -8,7 +7,6 @@ var connection = mysql.createConnection({
   // host: "localhost",
   // port: 3306,
   // user: "root",
-  // // password: SQL_PASSWORD,
   // password: "HmYz#4g7p1pH",
   // database: "burgers_db"
   host: "tkck4yllxdrw0bhi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
